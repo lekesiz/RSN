@@ -51,11 +51,16 @@ set(FILESYSTEM_SOURCES
     src/filesystems/ext4_parser.cpp
 )
 
+set(CLI_SOURCES
+    src/cli/cli.cpp
+)
+
 # Core library
 add_library(rsn_core STATIC
     ${CORE_SOURCES}
     ${COMMON_SOURCES}
     ${FILESYSTEM_SOURCES}
+    ${CLI_SOURCES}
 )
 
 target_include_directories(rsn_core PUBLIC
